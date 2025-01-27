@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -27,6 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ul>
+          <li>
+            <Link href="/overview">Overview</Link>
+            <Link href="/transactions">Transactions</Link>
+            <Link href="/budgets">Budgets</Link>
+            <Link href="/pots">Pots</Link>
+            <Link href="/bills">Recurring Bills</Link>
+          </li>
+        </ul>
         {children}
       </body>
     </html>
