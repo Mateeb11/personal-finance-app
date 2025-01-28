@@ -30,6 +30,10 @@ export default {
         "army-green": "var(--army-green)",
         gold: "var(--gold)",
         orange: "var(--orange)",
+        white: "var(--white)",
+      },
+      fontSize: {
+        "3xl": "var(--3xl)",
       },
     },
   },
