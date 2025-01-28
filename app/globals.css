@@ -3,8 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Theme */
+  --primary-100: rgba(248, 244, 240);
+  --primary-500: rgba(152, 144, 139);
+
+  --secondary-100: rgba(242, 242, 242);
+  --secondary-300: rgba(179, 179, 179);
+  --secondary-500: rgba(105, 104, 104);
+  --secondary-900: rgba(32, 31, 36);
+
+  /* Accent Colors */
+  --green: rgba(39, 124, 120);
+  --yellow: rgba(242, 205, 172);
+  --cyan: rgba(130, 201, 215);
+  --navy: rgba(98, 96, 112);
+  --red: rgba(201, 71, 54);
+  --purple-500: rgba(130, 108, 176);
+
+  /* Other Colors */
+  --purple-100: rgba(175, 129, 186);
+  --turquoise: rgba(89, 124, 124);
+  --brown: rgba(147, 103, 79);
+  --magenta: rgba(147, 79, 111);
+  --blue: rgba(63, 130, 178);
+  --navy-grey: rgba(151, 160, 172);
+  --army-green: rgba(127, 145, 97);
+  --gold: rgba(202, 179, 97);
+  --orange: rgba(190, 108, 73);
 }
 
 @media (prefers-color-scheme: dark) {
