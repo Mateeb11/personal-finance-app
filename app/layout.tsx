@@ -1,8 +1,17 @@
-import Link from "next/link";
+import "./globals.css";
+import classes from "./rootLayout.module.scss";
 
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Public_Sans } from "next/font/google";
-import "./globals.css";
+
+import NavIcon from "./_components/navIcon";
+
+import overviewIcon from "@/assets/images/icon-nav-overview.svg";
+import transactionsIcon from "@/assets/images/icon-nav-transactions.svg";
+import budgetsIcon from "@/assets/images/icon-nav-budgets.svg";
+import potsIcon from "@/assets/images/icon-nav-pots.svg";
+import billsIcon from "@/assets/images/icon-nav-recurring-bills.svg";
 
 const public_sans = Public_Sans({
   subsets: ["latin"],
@@ -22,13 +31,31 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={public_sans.className}>
-        <ul>
+        <ul className={classes.navBar}>
           <li>
-            <Link href="/overview">Overview</Link>
-            <Link href="/transactions">Transactions</Link>
-            <Link href="/budgets">Budgets</Link>
-            <Link href="/pots">Pots</Link>
-            <Link href="/bills">Recurring Bills</Link>
+            <Link href="/overview">
+              <NavIcon src={overviewIcon} alt="Home icon"></NavIcon>
+            </Link>
+          </li>
+          <li>
+            <Link href="/transactions">
+              <NavIcon src={transactionsIcon} alt="Transactions icon"></NavIcon>
+            </Link>
+          </li>
+          <li>
+            <Link href="/budgets">
+              <NavIcon src={budgetsIcon} alt="Budgets icon"></NavIcon>
+            </Link>
+          </li>
+          <li>
+            <Link href="/pots">
+              <NavIcon src={potsIcon} alt="Pots icon"></NavIcon>
+            </Link>
+          </li>
+          <li>
+            <Link href="/bills">
+              <NavIcon src={billsIcon} alt="Bills icon"></NavIcon>
+            </Link>
           </li>
         </ul>
         {children}
