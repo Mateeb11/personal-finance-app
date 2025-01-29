@@ -1,7 +1,16 @@
 .navBar {
-  display: flex;
-  gap: 3em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+
+  padding-top: 0.5em;
+  padding-inline: 0.5em;
+
+  background-color: var(--secondary-900);
+
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
