@@ -1,3 +1,15 @@
 .active {
   background-color: var(--white);
+
+  border-bottom: 4px solid var(--green);
+
+  .activeFill {
+    filter: brightness(0) saturate(100%) invert(41%) sepia(65%) saturate(398%)
+      hue-rotate(128deg) brightness(87%) contrast(94%);
+  }
+}
+
+.roundBorders {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
