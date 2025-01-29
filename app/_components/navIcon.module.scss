@@ -13,3 +13,8 @@
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
+
+.navHover:hover {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(0%)
+    hue-rotate(72deg) brightness(107%) contrast(107%);
+}

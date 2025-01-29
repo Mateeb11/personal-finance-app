@@ -12,7 +12,7 @@ export default function NavIcon({ src, alt, href }: any) {
     <div
       className={`grid place-items-center min-w-16 min-h-11 ${
         classes.roundBorders
-      } ${path.startsWith(href) ? classes.active : undefined}`}
+      } ${path.startsWith(href) ? classes.active : classes.navHover}`}
     >
       <Image
         src={src}
