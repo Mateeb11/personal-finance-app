@@ -34,27 +34,39 @@ export default function RootLayout({
         <ul className={classes.navBar}>
           <li>
             <Link href="/overview">
-              <NavIcon src={overviewIcon} alt="Home icon"></NavIcon>
+              <NavIcon
+                href="/overview"
+                src={overviewIcon}
+                alt="Home icon"
+              ></NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/transactions">
-              <NavIcon src={transactionsIcon} alt="Transactions icon"></NavIcon>
+              <NavIcon
+                href="/transactions"
+                src={transactionsIcon}
+                alt="Transactions icon"
+              ></NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/budgets">
-              <NavIcon src={budgetsIcon} alt="Budgets icon"></NavIcon>
+              <NavIcon
+                href="/budgets"
+                src={budgetsIcon}
+                alt="Budgets icon"
+              ></NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/pots">
-              <NavIcon src={potsIcon} alt="Pots icon"></NavIcon>
+              <NavIcon href="/pots" src={potsIcon} alt="Pots icon"></NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/bills">
-              <NavIcon src={billsIcon} alt="Bills icon"></NavIcon>
+              <NavIcon href="/bills" src={billsIcon} alt="Bills icon"></NavIcon>
             </Link>
           </li>
         </ul>
