@@ -1,20 +1,22 @@
 .active {
-  background-color: var(--white);
+  background-color: var(--primary-100);
 
   border-bottom: 4px solid var(--green);
 
-  .activeFill {
-    filter: brightness(0) saturate(100%) invert(41%) sepia(65%) saturate(398%)
-      hue-rotate(128deg) brightness(87%) contrast(94%);
+  path {
+    fill: var(--green);
   }
 }
 
-.roundBorders {
+.iconContainer {
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
+
+  path {
+    transition: all 0.25s linear;
+  }
 }
 
-.navHover:hover {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(9%) saturate(0%)
-    hue-rotate(72deg) brightness(107%) contrast(107%);
+.navHover:hover path {
+  fill: var(--secondary-100);
 }

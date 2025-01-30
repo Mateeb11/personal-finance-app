@@ -7,11 +7,11 @@ import { Public_Sans } from "next/font/google";
 
 import NavIcon from "./_components/navIcon";
 
-import overviewIcon from "@/assets/images/icon-nav-overview.svg";
-import transactionsIcon from "@/assets/images/icon-nav-transactions.svg";
-import budgetsIcon from "@/assets/images/icon-nav-budgets.svg";
-import potsIcon from "@/assets/images/icon-nav-pots.svg";
-import billsIcon from "@/assets/images/icon-nav-recurring-bills.svg";
+import OverviewIcon from "@/assets/images/icon-nav-overview.svg";
+import TransactionsIcon from "@/assets/images/icon-nav-transactions.svg";
+import BudgetsIcon from "@/assets/images/icon-nav-budgets.svg";
+import PotsIcon from "@/assets/images/icon-nav-pots.svg";
+import BillsIcon from "@/assets/images/icon-nav-recurring-bills.svg";
 
 const public_sans = Public_Sans({
   subsets: ["latin"],
@@ -34,39 +34,37 @@ export default function RootLayout({
         <ul className={classes.navBar}>
           <li>
             <Link href="/overview">
-              <NavIcon
-                href="/overview"
-                src={overviewIcon}
-                alt="Home icon"
-              ></NavIcon>
+              <NavIcon href="/overview">
+                <OverviewIcon />
+              </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/transactions">
-              <NavIcon
-                href="/transactions"
-                src={transactionsIcon}
-                alt="Transactions icon"
-              ></NavIcon>
+              <NavIcon href="/transactions">
+                <TransactionsIcon />
+              </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/budgets">
-              <NavIcon
-                href="/budgets"
-                src={budgetsIcon}
-                alt="Budgets icon"
-              ></NavIcon>
+              <NavIcon href="/budgets">
+                <BudgetsIcon />
+              </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/pots">
-              <NavIcon href="/pots" src={potsIcon} alt="Pots icon"></NavIcon>
+              <NavIcon href="/pots">
+                <PotsIcon />
+              </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/bills">
-              <NavIcon href="/bills" src={billsIcon} alt="Bills icon"></NavIcon>
+              <NavIcon href="/bills">
+                <BillsIcon />
+              </NavIcon>
             </Link>
           </li>
         </ul>
