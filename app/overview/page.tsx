@@ -1,3 +1,9 @@
+import Header from "../_components/header";
+
 export default function Overview() {
-  return <>Overview page</>;
+  return (
+    <>
+      <Header title="Overview" />
+    </>
+  );
 }

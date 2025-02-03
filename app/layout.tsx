@@ -68,7 +68,7 @@ export default function RootLayout({
             </Link>
           </li>
         </ul>
-        {children}
+        <div className={classes.pageContainer}>{children}</div>
       </body>
     </html>
   );

@@ -1,3 +1,9 @@
+import Header from "../_components/header";
+
 export default function Pots() {
-  return <>Pots page</>;
+  return (
+    <>
+      <Header title="Pots" />
+    </>
+  );
 }
