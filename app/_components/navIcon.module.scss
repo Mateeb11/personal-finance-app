@@ -1,22 +1,59 @@
 .iconContainer {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.25em;
+
+  min-width: 4em;
+  min-height: 2.75em;
+
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 
-  path {
-    transition: fill 0.25s linear;
+  @media (min-width: 768px) {
+    min-height: 4.125em;
+  }
+
+  path,
+  .iconText {
+    transition: all 0.25s linear;
+  }
+
+  .iconText {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--secondary-300);
+
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline;
+    }
   }
 }
+
 .active {
   background-color: var(--primary-100);
 
   border-bottom: 4px solid var(--green);
 
+  transition: all 0s linear;
+
   path {
     fill: var(--green);
-    transition: none;
+  }
+
+  .iconText {
+    color: var(--secondary-900);
   }
 }
 
-.navHover:hover path {
-  fill: var(--secondary-100);
+.navHover:hover {
+  path {
+    fill: var(--secondary-100);
+  }
+
+  .iconText {
+    color: var(--secondary-100);
+  }
 }

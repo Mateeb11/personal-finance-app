@@ -34,35 +34,35 @@ export default function RootLayout({
         <ul className={classes.navBar}>
           <li>
             <Link href="/overview">
-              <NavIcon href="/overview">
+              <NavIcon href="/overview" iconText="Overview">
                 <OverviewIcon />
               </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/transactions">
-              <NavIcon href="/transactions">
+              <NavIcon href="/transactions" iconText="Transactions">
                 <TransactionsIcon />
               </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/budgets">
-              <NavIcon href="/budgets">
+              <NavIcon href="/budgets" iconText="Budgets">
                 <BudgetsIcon />
               </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/pots">
-              <NavIcon href="/pots">
+              <NavIcon href="/pots" iconText="Pots">
                 <PotsIcon />
               </NavIcon>
             </Link>
           </li>
           <li>
             <Link href="/bills">
-              <NavIcon href="/bills">
+              <NavIcon href="/bills" iconText="Recurring Bills">
                 <BillsIcon />
               </NavIcon>
             </Link>
