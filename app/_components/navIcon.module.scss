@@ -1,3 +1,11 @@
+.iconContainer {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+
+  path {
+    transition: fill 0.25s linear;
+  }
+}
 .active {
   background-color: var(--primary-100);
 
@@ -5,15 +13,7 @@
 
   path {
     fill: var(--green);
-  }
-}
-
-.iconContainer {
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-
-  path {
-    transition: all 0.25s linear;
+    transition: none;
   }
 }
 
