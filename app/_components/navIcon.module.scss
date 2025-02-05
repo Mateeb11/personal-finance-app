@@ -14,6 +14,18 @@
     min-height: 4.125em;
   }
 
+  @media (min-width: 1440px) {
+    display: flex;
+    gap: 1em;
+
+    min-height: 3.5em;
+
+    padding-inline: 2em;
+
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+  }
+
   path,
   .iconText {
     transition: all 0.25s linear;
@@ -29,6 +41,10 @@
     @media (min-width: 768px) {
       display: inline;
     }
+
+    @media (min-width: 1440px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -36,6 +52,11 @@
   background-color: var(--primary-100);
 
   border-bottom: 4px solid var(--green);
+
+  @media (min-width: 1440px) {
+    border-bottom: none;
+    border-left: 4px solid var(--green);
+  }
 
   path {
     fill: var(--green);
