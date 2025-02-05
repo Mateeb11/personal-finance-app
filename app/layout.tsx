@@ -31,44 +31,46 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={public_sans.className}>
-        <ul className={classes.navBar}>
-          <li>
-            <Link href="/overview">
-              <NavIcon href="/overview" iconText="Overview">
-                <OverviewIcon />
-              </NavIcon>
-            </Link>
-          </li>
-          <li>
-            <Link href="/transactions">
-              <NavIcon href="/transactions" iconText="Transactions">
-                <TransactionsIcon />
-              </NavIcon>
-            </Link>
-          </li>
-          <li>
-            <Link href="/budgets">
-              <NavIcon href="/budgets" iconText="Budgets">
-                <BudgetsIcon />
-              </NavIcon>
-            </Link>
-          </li>
-          <li>
-            <Link href="/pots">
-              <NavIcon href="/pots" iconText="Pots">
-                <PotsIcon />
-              </NavIcon>
-            </Link>
-          </li>
-          <li>
-            <Link href="/bills">
-              <NavIcon href="/bills" iconText="Recurring Bills">
-                <BillsIcon />
-              </NavIcon>
-            </Link>
-          </li>
-        </ul>
-        <div className={classes.pageContainer}>{children}</div>
+        <div className={classes.pageContainer}>
+          <ul className={classes.navBar}>
+            <li>
+              <Link href="/overview">
+                <NavIcon href="/overview" iconText="Overview">
+                  <OverviewIcon />
+                </NavIcon>
+              </Link>
+            </li>
+            <li>
+              <Link href="/transactions">
+                <NavIcon href="/transactions" iconText="Transactions">
+                  <TransactionsIcon />
+                </NavIcon>
+              </Link>
+            </li>
+            <li>
+              <Link href="/budgets">
+                <NavIcon href="/budgets" iconText="Budgets">
+                  <BudgetsIcon />
+                </NavIcon>
+              </Link>
+            </li>
+            <li>
+              <Link href="/pots">
+                <NavIcon href="/pots" iconText="Pots">
+                  <PotsIcon />
+                </NavIcon>
+              </Link>
+            </li>
+            <li>
+              <Link href="/bills">
+                <NavIcon href="/bills" iconText="Recurring Bills">
+                  <BillsIcon />
+                </NavIcon>
+              </Link>
+            </li>
+          </ul>
+          <div className={classes.contentContainer}>{children}</div>
+        </div>
       </body>
     </html>
   );
