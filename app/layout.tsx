@@ -6,9 +6,10 @@ import type { Metadata } from "next";
 import { Public_Sans } from "next/font/google";
 
 import NavIcon from "./_components/navIcon";
+import MinimizeMenu from "./_components/minimizeMenu";
 
 import LogoLarge from "@/assets/images/logo-large.svg";
-
+import MinimizeIcon from "@/assets/images/icon-minimize-menu.svg";
 import OverviewIcon from "@/assets/images/icon-nav-overview.svg";
 import TransactionsIcon from "@/assets/images/icon-nav-transactions.svg";
 import BudgetsIcon from "@/assets/images/icon-nav-budgets.svg";
@@ -75,6 +76,9 @@ export default function RootLayout({
                 </Link>
               </li>
             </ul>
+            <MinimizeMenu>
+              <MinimizeIcon />
+            </MinimizeMenu>
           </nav>
           <div className={classes.contentContainer}>{children}</div>
         </div>
