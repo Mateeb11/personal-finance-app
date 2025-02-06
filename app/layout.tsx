@@ -8,6 +8,7 @@ import { Public_Sans } from "next/font/google";
 import NavIcon from "./_components/navIcon";
 
 import LogoLarge from "@/assets/images/logo-large.svg";
+
 import OverviewIcon from "@/assets/images/icon-nav-overview.svg";
 import TransactionsIcon from "@/assets/images/icon-nav-transactions.svg";
 import BudgetsIcon from "@/assets/images/icon-nav-budgets.svg";
@@ -33,46 +34,48 @@ export default function RootLayout({
     <html lang="en">
       <body className={public_sans.className}>
         <div className={classes.pageContainer}>
-          <ul className={classes.navBar}>
+          <nav className={classes.navBar}>
             <span className={classes.logo}>
               <LogoLarge />
             </span>
-            <li>
-              <Link href="/overview">
-                <NavIcon href="/overview" iconText="Overview">
-                  <OverviewIcon />
-                </NavIcon>
-              </Link>
-            </li>
-            <li>
-              <Link href="/transactions">
-                <NavIcon href="/transactions" iconText="Transactions">
-                  <TransactionsIcon />
-                </NavIcon>
-              </Link>
-            </li>
-            <li>
-              <Link href="/budgets">
-                <NavIcon href="/budgets" iconText="Budgets">
-                  <BudgetsIcon />
-                </NavIcon>
-              </Link>
-            </li>
-            <li>
-              <Link href="/pots">
-                <NavIcon href="/pots" iconText="Pots">
-                  <PotsIcon />
-                </NavIcon>
-              </Link>
-            </li>
-            <li>
-              <Link href="/bills">
-                <NavIcon href="/bills" iconText="Recurring Bills">
-                  <BillsIcon />
-                </NavIcon>
-              </Link>
-            </li>
-          </ul>
+            <ul className={classes.navLinks}>
+              <li>
+                <Link href="/overview">
+                  <NavIcon href="/overview" iconText="Overview">
+                    <OverviewIcon />
+                  </NavIcon>
+                </Link>
+              </li>
+              <li>
+                <Link href="/transactions">
+                  <NavIcon href="/transactions" iconText="Transactions">
+                    <TransactionsIcon />
+                  </NavIcon>
+                </Link>
+              </li>
+              <li>
+                <Link href="/budgets">
+                  <NavIcon href="/budgets" iconText="Budgets">
+                    <BudgetsIcon />
+                  </NavIcon>
+                </Link>
+              </li>
+              <li>
+                <Link href="/pots">
+                  <NavIcon href="/pots" iconText="Pots">
+                    <PotsIcon />
+                  </NavIcon>
+                </Link>
+              </li>
+              <li>
+                <Link href="/bills">
+                  <NavIcon href="/bills" iconText="Recurring Bills">
+                    <BillsIcon />
+                  </NavIcon>
+                </Link>
+              </li>
+            </ul>
+          </nav>
           <div className={classes.contentContainer}>{children}</div>
         </div>
       </body>
