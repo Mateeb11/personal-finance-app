@@ -26,7 +26,7 @@
       flex-direction: column;
 
       padding-inline: 0 1.5em;
-      padding-block: 1em;
+      padding-block: 2.5em;
 
       max-width: 300px;
 
@@ -35,6 +35,17 @@
 
       border-top-left-radius: 0;
       border-bottom-right-radius: 0.5em;
+    }
+
+    .logo {
+      display: none;
+
+      @media (min-width: 1440px) {
+        display: block;
+
+        margin-inline: 2em;
+        margin-bottom: 4em;
+      }
     }
   }
 

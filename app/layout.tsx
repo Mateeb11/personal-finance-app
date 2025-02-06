@@ -7,6 +7,7 @@ import { Public_Sans } from "next/font/google";
 
 import NavIcon from "./_components/navIcon";
 
+import LogoLarge from "@/assets/images/logo-large.svg";
 import OverviewIcon from "@/assets/images/icon-nav-overview.svg";
 import TransactionsIcon from "@/assets/images/icon-nav-transactions.svg";
 import BudgetsIcon from "@/assets/images/icon-nav-budgets.svg";
@@ -33,6 +34,9 @@ export default function RootLayout({
       <body className={public_sans.className}>
         <div className={classes.pageContainer}>
           <ul className={classes.navBar}>
+            <span className={classes.logo}>
+              <LogoLarge />
+            </span>
             <li>
               <Link href="/overview">
                 <NavIcon href="/overview" iconText="Overview">
