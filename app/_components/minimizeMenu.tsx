@@ -2,13 +2,18 @@
 
 import classes from "./minimizeMenu.module.scss";
 
-import { useEffect } from "react";
 import NavIcon from "./navIcon";
 
 export default function MinimizeMenu({ children }: any) {
-  useEffect(() => {});
+  const changeNavbarStatus = () => {
+    localStorage.setItem(
+      "minimizeBar",
+      localStorage.getItem("minimizeBar") === "false" ? "true" : "false"
+    );
+  };
+
   return (
-    <div className={classes.minimizeIcon}>
+    <div className={classes.minimizeIcon} onClick={changeNavbarStatus}>
       <NavIcon iconText="Minimize Menu">{children}</NavIcon>
     </div>
   );
