@@ -51,3 +51,10 @@
     }
   }
 }
+
+.miniMenu {
+  @media (min-width: 1440px) {
+    max-width: 88px;
+    padding-inline: 0 0.5em;
+  }
+}

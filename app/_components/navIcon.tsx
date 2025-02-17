@@ -15,7 +15,7 @@ export default function NavIcon({ href, iconText, children }: any) {
     <div
       className={`${classes.iconContainer} ${
         path.startsWith(href) ? classes.active : classes.navHover
-      }`}
+      } ${minimizeBar === "true" ? "pl-8 pr-6" : undefined}`}
     >
       {children}
       <span

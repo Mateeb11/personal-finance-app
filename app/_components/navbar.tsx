@@ -9,6 +9,7 @@ import NavIcon from "./navIcon";
 import MinimizeMenu from "./minimizeMenu";
 
 import LogoLarge from "@/assets/images/logo-large.svg";
+import LogoSmall from "@/assets/images/logo-small.svg";
 import MinimizeIcon from "@/assets/images/icon-minimize-menu.svg";
 import OverviewIcon from "@/assets/images/icon-nav-overview.svg";
 import TransactionsIcon from "@/assets/images/icon-nav-transactions.svg";
@@ -18,7 +19,7 @@ import BillsIcon from "@/assets/images/icon-nav-recurring-bills.svg";
 import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
 
 export default function Navbar() {
-  const [minimizeBarStatus, setMinimizeBarStatus] = useState("false");
+  const [minimizeBarStatus, setMinimizeBarStatus] = useState("true");
 
   useEffect(() => {
     setMinimizeBarStatus(localStorage.getItem("minimizeBar") || "false");
@@ -35,9 +36,17 @@ export default function Navbar() {
   };
   return (
     <MiniminzeMenuStatusContext value={ctxValue}>
-      <nav className={classes.navBar}>
-        <span className={classes.logo}>
-          <LogoLarge />
+      <nav
+        className={`${classes.navBar} ${
+          minimizeBarStatus === "true" ? classes.miniMenu : undefined
+        }`}
+      >
+        <span
+          className={`${classes.logo} ${
+            minimizeBarStatus === "true" ? "ml-8 mr-6" : undefined
+          }`}
+        >
+          {minimizeBarStatus === "true" ? <LogoSmall /> : <LogoLarge />}
         </span>
         <ul className={classes.navLinks}>
           <li>
