@@ -3,60 +3,6 @@
     display: flex;
   }
 
-  .navBar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
-    padding-block: 0.5em 0;
-    padding-inline: 1em;
-
-    background-color: var(--secondary-900);
-
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-
-    @media (min-width: 1440px) {
-      position: relative;
-
-      display: flex;
-      flex-direction: column;
-      gap: 4em;
-
-      padding-inline: 0 1.5em;
-      padding-block: 2.5em;
-
-      max-width: 300px;
-
-      min-height: 100vh;
-      min-height: 100svh;
-
-      border-top-left-radius: 0;
-      border-bottom-right-radius: 1em;
-      border-top-right-radius: 1em;
-    }
-
-    .navLinks {
-      display: grid;
-      grid-auto-flow: column;
-
-      @media (min-width: 1440px) {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
-    .logo {
-      display: none;
-
-      @media (min-width: 1440px) {
-        display: block;
-
-        margin-inline: 2em;
-      }
-    }
-  }
-
   .contentContainer {
     margin: 1.5em 1em;
 
