@@ -2,17 +2,14 @@
 
 import classes from "./navIcon.module.scss";
 
-import { useEffect, useState } from "react";
+import { use } from "react";
 import { usePathname } from "next/navigation";
+import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
 
 export default function NavIcon({ href, iconText, children }: any) {
   const path: string = usePathname();
 
-  const [minimizeBarStatus, setMinimizeBarStatus] = useState("false");
-
-  useEffect(() => {
-    setMinimizeBarStatus(localStorage.getItem("minimizeBar") || "false");
-  });
+  const { minimizeBar } = use(MiniminzeMenuStatusContext);
 
   return (
     <div
@@ -21,7 +18,13 @@ export default function NavIcon({ href, iconText, children }: any) {
       }`}
     >
       {children}
-      <span className={classes.iconText}>{iconText}</span>
+      <span
+        className={`${classes.iconText} ${
+          minimizeBar === "true" ? classes.hideText : undefined
+        }`}
+      >
+        {iconText}
+      </span>
     </div>
   );
 }

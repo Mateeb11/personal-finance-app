@@ -2,4 +2,7 @@
 
 import { createContext } from "react";
 
-export const MiniminzeMenuStatusContext = createContext("false");
+export const MiniminzeMenuStatusContext = createContext({
+  minimizeBar: "false",
+  changeMinimizeBarStatus: (value: string) => {},
+});
