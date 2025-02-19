@@ -46,7 +46,7 @@ export default function Navbar() {
             minimizeBarStatus === "true" ? "ml-8 mr-6" : undefined
           }`}
         >
-          {minimizeBarStatus === "true" ? <LogoSmall /> : <LogoLarge />}
+          <LogoLarge />
         </span>
         <ul className={classes.navLinks}>
           <li>
