@@ -20,6 +20,8 @@
     display: flex;
     gap: 1em;
 
+    overflow: hidden;
+
     min-height: 3.5em;
 
     padding-inline: 2em;
@@ -34,15 +36,25 @@
     transition: all 0.25s linear;
   }
 
+  .icon {
+    flex-shrink: 0;
+  }
+
   .iconText {
     font-size: 12px;
     font-weight: 600;
     color: var(--secondary-300);
 
+    white-space: nowrap;
+
     display: none;
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
 
     @media (min-width: 768px) {
       display: inline;
+      opacity: 1;
     }
 
     @media (min-width: 1440px) {
@@ -51,7 +63,7 @@
   }
   .hideText {
     @media (min-width: 1440px) {
-      display: none;
+      opacity: 0;
     }
   }
 }

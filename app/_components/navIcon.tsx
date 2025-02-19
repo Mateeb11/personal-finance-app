@@ -17,7 +17,7 @@ export default function NavIcon({ href, iconText, children }: any) {
         path.startsWith(href) ? classes.active : classes.navHover
       } ${minimizeBar === "true" ? "pl-8 pr-6" : undefined}`}
     >
-      {children}
+      <span className={classes.icon}>{children}</span>
       <span
         className={`${classes.iconText} ${
           minimizeBar === "true" ? classes.hideText : undefined
