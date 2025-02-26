@@ -51,7 +51,7 @@ export default function Navbar() {
         <ul className={classes.navLinks}>
           <li>
             <Link href="/overview">
-              <NavIcon href="/overview" iconText="Overview">
+              <NavIcon href="/overview" iconText="Overview" defaultRoute={true}>
                 <OverviewIcon />
               </NavIcon>
             </Link>

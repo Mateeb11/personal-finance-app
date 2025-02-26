@@ -6,15 +6,24 @@ import { use } from "react";
 import { usePathname } from "next/navigation";
 import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
 
-export default function NavIcon({ href, iconText, children }: any) {
+export default function NavIcon({
+  href,
+  iconText,
+  defaultRoute = false,
+  children,
+}: any) {
   const path: string = usePathname();
 
   const { minimizeBar } = use(MiniminzeMenuStatusContext);
 
+  console.log(path);
+
   return (
     <div
       className={`${classes.iconContainer} ${
-        path.startsWith(href) ? classes.active : classes.navHover
+        path.startsWith(href) || (path.length === 1 && defaultRoute)
+          ? classes.active
+          : classes.navHover
       } ${minimizeBar === "true" ? "pl-8 pr-6" : undefined}`}
     >
       <span className={classes.icon}>{children}</span>
