@@ -17,9 +17,13 @@ export default function MinimizeMenu({ children }: any) {
   };
 
   return (
-    <div className={classes.minimizeIcon} onClick={changeNavbarStatus}>
+    <div className={classes.minimizeIconContainer} onClick={changeNavbarStatus}>
       <NavIcon iconText="Minimize Menu">
-        <span className={minimizeBar === "true" ? classes.rotate : undefined}>
+        <span
+          className={`${classes.minimizeIcon} ${
+            minimizeBar === "true" ? classes.rotate : undefined
+          }`}
+        >
           {children}
         </span>
       </NavIcon>

@@ -1,4 +1,4 @@
-.minimizeIcon {
+.minimizeIconContainer {
   display: none;
 
   @media (min-width: 1440px) {
@@ -6,8 +6,16 @@
 
     margin-top: auto;
   }
-}
 
-.rotate {
-  transform: rotate(180deg);
+  .minimizeIcon {
+    svg {
+      transition: transform 0.5s ease;
+      transform: rotate(0deg);
+    }
+  }
+  .rotate {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
 }
