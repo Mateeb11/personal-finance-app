@@ -19,7 +19,7 @@ import BillsIcon from "@/assets/images/icon-nav-recurring-bills.svg";
 import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
 
 export default function Navbar() {
-  const [minimizeBarStatus, setMinimizeBarStatus] = useState("true");
+  const [minimizeBarStatus, setMinimizeBarStatus] = useState("false");
 
   useEffect(() => {
     setMinimizeBarStatus(localStorage.getItem("minimizeBar") || "false");
