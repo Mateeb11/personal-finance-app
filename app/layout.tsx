@@ -1,4 +1,4 @@
-import Navbar from "./_components/navbar";
+import Navbar from "./_components/_nav/navbar";
 import "./globals.css";
 import classes from "./rootLayout.module.scss";
 

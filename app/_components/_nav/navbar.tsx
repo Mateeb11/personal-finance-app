@@ -16,7 +16,7 @@ import TransactionsIcon from "@/assets/images/icon-nav-transactions.svg";
 import BudgetsIcon from "@/assets/images/icon-nav-budgets.svg";
 import PotsIcon from "@/assets/images/icon-nav-pots.svg";
 import BillsIcon from "@/assets/images/icon-nav-recurring-bills.svg";
-import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
+import { MiniminzeMenuStatusContext } from "../../_providers/minimizeMenuStatus-provider";
 
 export default function Navbar() {
   const [minimizeBarStatus, setMinimizeBarStatus] = useState("false");

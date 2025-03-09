@@ -4,7 +4,7 @@ import classes from "./minimizeMenu.module.scss";
 
 import { use } from "react";
 
-import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
+import { MiniminzeMenuStatusContext } from "../../_providers/minimizeMenuStatus-provider";
 import NavIcon from "./navIcon";
 
 export default function MinimizeMenu({ children }: any) {

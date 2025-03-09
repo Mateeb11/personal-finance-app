@@ -4,7 +4,7 @@ import classes from "./navIcon.module.scss";
 
 import { use } from "react";
 import { usePathname } from "next/navigation";
-import { MiniminzeMenuStatusContext } from "../_providers/minimizeMenuStatus-provider";
+import { MiniminzeMenuStatusContext } from "../../_providers/minimizeMenuStatus-provider";
 
 export default function NavIcon({
   href,
@@ -15,8 +15,6 @@ export default function NavIcon({
   const path: string = usePathname();
 
   const { minimizeBar } = use(MiniminzeMenuStatusContext);
-
-  console.log(path);
 
   return (
     <div
